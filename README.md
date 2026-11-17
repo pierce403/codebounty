@@ -49,3 +49,9 @@ The dry run validates Wrangler packaging only; it does not deploy the app or ver
 7. In **Payout settings**, validate a public EVM address for an explicitly selected network, then try the masked display, temporary reveal, and clear controls.
 
 The application runs as a Vite/React interface packaged with [Cloudflare Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/). The Worker currently provides only a small metadata endpoint; a production API, [D1 database](https://developers.cloudflare.com/d1/get-started/), and [GitHub App](https://docs.github.com/en/rest/apps/installations?apiVersion=2022-11-28) for real sign-in and repository access remain planned work requiring approval. The payout-address form validates user input locally with no RPC and keeps a saved address in this tab's `sessionStorage` (`codebounty-payout-session-v1`), masked by default with reveal and clear controls. The address is never sent to a server or stored in `localStorage`; there is no wallet connection or transfer. The fixed-sample, rule-based PR triage UI uses supplied metadata only; live GitHub triage remains planned. See the [product plan](docs/product-plan.md) for flows, data and trust boundaries, abuse controls, and decisions needed before launch.
+
+## License
+
+Copyright 2026 Dean Pierce.
+
+The original code and documentation authored for this project are licensed under the [Apache License, Version 2.0](LICENSE). Third-party dependencies, quoted source material, data, fonts, media, and other third-party assets retain their respective licenses and rights; this grant does not relicense them.
